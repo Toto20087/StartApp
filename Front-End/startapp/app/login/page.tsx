@@ -1,5 +1,7 @@
+import Login from '../components/Login'
+
 export default function login() {
     return (
-        <h1>Este es el login por ahora</h1>
+        <Login/>
     )
 }

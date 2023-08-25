@@ -12,6 +12,20 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      nunito: 'Nunito, sans-serif',
+      poppins: 'Poppins, sans-serif'
+    },
+    fontSize: {
+      xs: '0.46rem',
+      sm: '0.65rem',
+      base: '1rem',
+      xl: '1.25rem',
+      '2xl': '1.563rem',
+      '3xl': '1.953rem',
+      '4xl': '2.441rem',
+      '5xl': '3.052rem',
+    },
       "colors": {
         'blue': '#1fb6ff',
         'pink': '#ff49db',
@@ -47,9 +61,6 @@ const config: Config = {
           800: "#0D1117",
           900: "#070A0D",
           950: "#040506"
-        },
-        fontFamily: {
-          sans : ['var(--font-poppins)'] 
         }
       },
     extend: {
