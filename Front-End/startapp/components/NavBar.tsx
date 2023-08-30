@@ -11,7 +11,7 @@ const links = [{
     route: "/login"
 }]
 
-export default function NavBar() {
+const NavBar = () => {
     return(
         <nav className='flex justify-center my-2'>
             <ul className='flex flex-row p-6 border rounded-md'>
@@ -26,3 +26,5 @@ export default function NavBar() {
         </nav>
     )
 }
+
+export default NavBar;
