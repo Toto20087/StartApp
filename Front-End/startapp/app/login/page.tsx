@@ -1,7 +1,9 @@
-import Login from '../components/Login'
+import Login from "../../components/Login";
 
 export default function login() {
-    return (
-        <Login/>
-    )
+  return (
+    <main className="flex justify-center my-8">
+      <Login />
+    </main>
+  );
 }

@@ -12,14 +12,23 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    letterSpacing: {
+      tightest: '-0.05em',
+      tighter: '-0.04em',
+      tight: '-0.03em',
+      normal: '0',
+      wide: '0.03em',
+      wider: '0.04em',
+      widest: '0.25em',
+    },
     fontFamily: {
       nunito: 'Nunito, sans-serif',
       poppins: 'Poppins, sans-serif'
     },
     fontSize: {
-      xs: '0.46rem',
-      sm: '0.65rem',
-      base: '1rem',
+      xs: '0.60rem',
+      sm: '0.70rem',
+      base: '0.8rem',
       xl: '1.25rem',
       '2xl': '1.563rem',
       '3xl': '1.953rem',
@@ -37,7 +46,7 @@ const config: Config = {
         'violet': '#260E39',
         'darker-purple': '#3902BA',
         "purple": {
-          50: "#EAE1FE",
+          50: "#3E6C8C",
           100: "#D9C8FE",
           200: "#B08CFD",
           300: "#8A55FC",
@@ -50,7 +59,7 @@ const config: Config = {
           950: "#070014"
         },
         "gray": {
-          50: "#475E7B",
+          50: "#B5B2B2",
           100: "#415771",
           200: "#3A4D64",
           300: "#304154",

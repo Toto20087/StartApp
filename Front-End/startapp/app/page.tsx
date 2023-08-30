@@ -1,5 +1,7 @@
 export default function Home () {
   return (
-      <h1>Esta es la pagina por ahora</h1>
+    <section className="h-screen bg-orange">
+      <h1>Esta es la landing page</h1>
+    </section>
   )
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Select from 'react-select';
-import { customStyles } from './selectStyles';
+import { customStyles } from './selectStyles'
 
 const MultiSelectInput = () => {
   const options = [
@@ -11,7 +11,7 @@ const MultiSelectInput = () => {
     { value: 'opcion3', label: 'Opción 3' },
   ];
   
-  const Input = () => {
+  const MultiInput = () => {
     const [selectedOptions, setSelectedOptions] = React.useState([]);
   
     const handleSelectChange = (selectedValues) => {
@@ -26,14 +26,13 @@ const MultiSelectInput = () => {
           value={selectedOptions}
           onChange={handleSelectChange}
           styles={customStyles}
-          className='text-gray-200 '
         />
       </div>
     );
   };
   return (
-    <div className="flex justify-center w-64 h-10 rounded bg-gray-800 text-gray-200 text-sm">
-      <Input/>
+    <div className="mx-4 my-4 bg-gray-800 rounded-md text-gray-200 text-sm">
+      <MultiInput/>
     </div>
   );
 };

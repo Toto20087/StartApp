@@ -1,38 +1,26 @@
 import Link from "next/link";
 import React, { useState } from 'react';
 import MultiSelectInput from './MultiSelectInput';
-
-export const Input = ({
-  title,
-  placeHolder,
-}: {
-  title: string;
-  placeHolder: string;
-}) => {
-  return (
-    <div className="my-2">
-      <h6 className="text-xs tracking-widest">{title}</h6>
-      <input
-        className="flex justify-center my-1 w-64 h-8 rounded bg-gray-800 text-gray-200 text-sm"
-        type="text"
-        name=""
-        id=""
-        placeholder={placeHolder}
-      />
-    </div>
-  );
-};
+import Input from "./Input";
+import Image from 'next/image'
 
 export default function SignUp() {
   return (
-    <article className="bg-gradient-to-b from-purple-800 from-20% via-violet to-gray-700 flex justify-center p-8 rounded-lg w-96 shadow-2xl">
-      <div>{/* Componente Image */}</div>
-      <section>
+    <article className="flex flex-col align-middle justify-center bg-gradient-to-b from-purple-800 from-20% via-violet to-gray-700 p-8 rounded-lg shadow-2xl">
+      <div className="flex justify-center">
+        <Image
+          src="/img/Captura-removebg-preview.png"
+          width={200}
+          height={64}
+          alt="Picture of the author"
+        />
+      </div>
+      <section className="flex flex-col justify-center align-middle">
         {/* Titulo, Inputs, Boton*/}
         <div className="flex justify-center align-middle">
-          <h3 className="font-semibold">Sign Up</h3>
+          <h2 className="font-semibold text-xl">Sign Up</h2>
         </div>
-        <div className="flex my-2 flex-col">
+        <div className="flex my-2 flex-col justify-center align-middle mx-8">
           {/* Componente Input */}
           <Input title="USERNAME" placeHolder="Enter your Username" />
           <Input title="EMAIL" placeHolder="Enter your Email" />
@@ -46,7 +34,7 @@ export default function SignUp() {
           <a href=""></a>
         </div>
         <div className="flex align-middle justify-center flex-col">
-          <button className="my-2 mx-2.5 py-2.5 bg-darker-purple rounded-lg text-sm">
+          <button className="w-56 my-1 mx-16 py-2.5 bg-darker-purple rounded-lg text-base font-semibold">
             <Link href="/">Sign Up</Link>
           </button>
           <h6 className="flex align-middle justify-center text-sm text-gray-200">
