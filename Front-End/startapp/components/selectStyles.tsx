@@ -9,4 +9,4 @@ export const customStyles = {
     border: 'none',
     fontSize: '0.600rem',
   }),
-};
+}
