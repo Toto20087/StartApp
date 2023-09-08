@@ -16,8 +16,8 @@ const config: Config = {
       widest: '0.20em',
     },
     fontFamily: {
-      bebas: ['Bebas Neue', 'sans-serif'],
-      raleway: ['Raleway', 'sans-serif'],
+      nunito: 'Nunito, sans-serif',
+      poppins: 'Poppins, sans-serif'
     },
     fontSize: {
       xs: '0.8rem',
@@ -30,6 +30,8 @@ const config: Config = {
       '5xl': '3.052rem',
     },
       "colors": {
+        'primaryv': '#9F00FB',
+        'primaryp': '#FC0F5F',
         'blue': '#1fb6ff',
         'pink': '#ff49db',
         'orange': '#ff7849',
@@ -70,8 +72,15 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
+      
+      width:
+      {
+        '128': '32rem',
+        '208': '52rem',
+        '217':'91.3125rem',
+      }
     },
   },
   plugins: [],
