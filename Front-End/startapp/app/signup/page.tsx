@@ -8,7 +8,7 @@ import MultiSelectInput from "../../components/MultiSelectInput";
 
 export default function Signup() {
   return (
-    <main className="bg-gradient-to-br from-purple-800 from-20% via-violet to-gray-700 flex justify-center relative">
+    <main className="bg-gradient-to-br from-purple-800 via-violet to-gray-700 flex justify-center relative">
       <div className="ml-24 flex flex-col align-middle justify-center">
           <Image
             src={"/img/StartApp-Logo-lg.png"}
@@ -18,7 +18,7 @@ export default function Signup() {
           />
           <h2 className="text-3xl font-medium tracking-wide font-raleway ml-16">Develop Your Dreams</h2>
       </div>
-      <article className="bg-gray-700 border-2 border-white p-16 pt-20 pb-14 rounded-lg shadow-2xl ml-80 mt-10 mb-10">
+      <article className="bg-gray-700 border-2 border-white p-16 pt-20 pb-14 rounded-lg shadow-2xl ml-80 mt-20 mb-16">
         <section className="flex flex-col justify-center align-middle">
           <div className="flex flex-col float-left align-middle mb-6 font-raleway">
             <h2 className="font-medium text-4xl tracking-wide">Sign Up</h2>

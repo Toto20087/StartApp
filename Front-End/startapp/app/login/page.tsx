@@ -6,7 +6,7 @@ import PasswordInput from "../../components/PasswordInput";
 
 export default function login() {
   return (
-    <main className="bg-gradient-to-br from-purple-800 from-20% via-violet to-gray-700 flex justify-center h-screen align-middle">
+    <main className="bg-gradient-to-br from-purple-800 via-violet to-gray-700 flex justify-center h-screen align-middle">
       <div className="ml-24 flex flex-col align-middle justify-center">
           <Image
             src={"/img/StartApp-Logo-lg.png"}
@@ -16,7 +16,7 @@ export default function login() {
           />
           <h2 className="text-3xl font-medium tracking-wide font-raleway ml-16">Develop Your Dreams</h2>
       </div>
-      <article className="bg-gray-700 border-2 border-white p-8 py-18 rounded-lg shadow-2xl ml-80 my-40 align-middle">
+      <article className="bg-gray-700 border-2 border-white p-10 py-18 rounded-lg shadow-2xl ml-80 my-36 align-middle">
         <section className="flex flex-col justify-center align-middle">
           <div className="flex flex-col float-left align-middle mb-6 font-raleway">
             <Image
@@ -32,7 +32,7 @@ export default function login() {
             <h6 className="text-gray-50">
               Want to Create an Account?
               <span className="mx-1 text-blue">
-                <Link href="/login">Sign Up</Link>
+                <Link href="/signup">Sign Up</Link>
               </span>
             </h6>
           </div>
@@ -53,7 +53,7 @@ export default function login() {
           </div>
           <div className="flex align-middle justify-center flex-col">
             <Link href="/">
-              <button className="w-72 mt-2 ml-20 mb-4 py-3 bg-darker-purple rounded-lg">
+              <button className="w-72 mt-2 ml-20 mb-6 py-3 bg-darker-purple rounded-lg">
                 <h4 className="text-xl tracking-wide font-[550]">Login</h4>
               </button>
             </Link>

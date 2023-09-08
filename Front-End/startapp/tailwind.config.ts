@@ -17,7 +17,9 @@ const config: Config = {
     },
     fontFamily: {
       nunito: 'Nunito, sans-serif',
-      poppins: 'Poppins, sans-serif'
+      poppins: 'Poppins, sans-serif',
+      raleway: 'Raleway, sans-serif',
+      bebas: 'Bebas Neue, sans-serif'
     },
     fontSize: {
       xs: '0.8rem',
