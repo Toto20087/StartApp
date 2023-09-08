@@ -1,10 +1,4 @@
 import type { Config } from 'tailwindcss'
-// import { Poppins } from "@next/font/google"
-
-// let pins = Poppins({
-//   subsets: ["latin"],
-//   weight: "400",
-// });
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,18 +11,19 @@ const config: Config = {
       tighter: '-0.04em',
       tight: '-0.03em',
       normal: '0',
-      wide: '0.03em',
-      wider: '0.04em',
-      widest: '0.25em',
+      wide: '0.06em',
+      wider: '0.08em',
+      widest: '0.20em',
     },
     fontFamily: {
       nunito: 'Nunito, sans-serif',
       poppins: 'Poppins, sans-serif',
-      redhatdisplay: 'Red Hat Display, sans-serif',
+      raleway: 'Raleway, sans-serif',
+      bebas: 'Bebas Neue, sans-serif'
     },
     fontSize: {
-      xs: '0.60rem',
-      sm: '0.70rem',
+      xs: '0.8rem',
+      sm: '0.85rem',
       base: '0.8rem',
       xl: '1.25rem',
       '2xl': '1.563rem',
