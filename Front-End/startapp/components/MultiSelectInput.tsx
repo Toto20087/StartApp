@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Select from 'react-select';
-import customStyles from './customStyles';
+import customStyles from './selectCustomStyles';
 
 const MultiSelectInput = () => {
   const options = [

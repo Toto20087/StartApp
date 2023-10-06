@@ -9,6 +9,9 @@ const links = [{
 }, {
     label: "Login",
     route: "/login"
+}, {
+    label: "Projects",
+    route: "/projects"
 }]
 
 const NavBar = () => {
