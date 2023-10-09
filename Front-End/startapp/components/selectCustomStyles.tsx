@@ -7,7 +7,7 @@ const customStyles = {
       borderRadius : '0.375rem',
       color: '#B5B2B2',
       height: '3rem',
-      width: '100%',
+      width: '20rem',
       padding: '0.2rem',
       fontSize: '0.875rem',
       fontWeight: 400,

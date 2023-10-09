@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link"
 import MultiSelectInput from "./MultiSelectInput";
 import Icons from "./Icons";
@@ -20,9 +20,9 @@ const Input = ({
 }) => {
 return (
     <div className="my-2">
-        <h6 className="text-xs font-semibold tracking-widest font-bebas" >{title}</h6>
+        <h6 className="text-xs font-semibold tracking-widest font-bebas mb-1" >{title}</h6>
         <input
-            className="flex justify-center my-1 w-96 h-12 rounded-md bg-gray-800 text-gray-50 p-2"
+            className="flex justify-center w-80 h-12 rounded-md bg-gray-800 text-gray-50 p-2"
             type="text"
             name={name}
             value={value}
@@ -53,15 +53,15 @@ return (
         <h6 className="text-xs font-semibold tracking-widest" >PASSWORD</h6>
         <div className="flex flex-row relative justify-between">
             <input
-                className="flex justify-center my-1 w-96 h-12 rounded-md bg-gray-800 text-gray-50 p-2 z-0 "
-                type={passwordVisible ? 'password' : 'text'}
+                className="flex justify-center mt-1 w-80 h-12 rounded-md bg-gray-800 text-gray-50 p-2 z-0 "
+                type={passwordVisible ? 'text' : 'password'}
                 name={name}
                 id=""
                 placeholder="Enter your Password"
                 value={value}
                 onChange={onChange}
             />
-            <button onClick={handleClick} className="flex z-10 mt-5 ml-[22rem] absolute"> 
+            <button type="button" onClick={handleClick} className="flex z-10 mt-5 ml-[18rem] absolute"> 
                 <img src = {passwordVisible ? "/svg/ojoCerrado.svg" : "/svg/ojoAbierto.svg"} />
             </button>
         </div>
@@ -70,7 +70,7 @@ return (
 };
 
 
-const Form = () => {
+const SignUpForm = () => {
     const [formData, setFormData] = useState({
       username: '',
       email: '',
@@ -81,20 +81,22 @@ const Form = () => {
     const handleSubmit = (e : React.FormEvent) => {
       e.preventDefault();
       console.log('Datos del formulario enviados:', formData);
+      setFormData({
+        username: '',
+        email: '',
+        password: '',
+        selectedOptions: [],
+      });
     };
   
     const handleInputChange = (e :  React.FormEvent) => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
     };
-
-    const handleOptionsChange = (selectedOptions: string[]) => {
-        setFormData({ ...formData, selectedOptions });
-      };
   
     return (
       <section>
-        <form className="flex my-2 flex-col justify-center align-middle mx-8" onSubmit={handleSubmit}>
+        <form className="flex my-2 flex-col justify-center items-center mx-8" onSubmit={handleSubmit}>
           {/* Componente Input para el username */}
           <Input
             name="username"
@@ -118,10 +120,10 @@ const Form = () => {
             onChange={handleInputChange}
           />
           <div>
-            <div className='mt-4'>
-                <h6 className="text-xs font-semibold tracking-widest font-bebas" >WHAT DO YOU DO?</h6>
+            <div className='mt-2 mb-1'>
+                <h6 className="text-xs font-semibold tracking-widest font-bebas" >SKILLS</h6>
             </div>
-            <div className="bg-gray-800 rounded-md text-gray-200 text-sm w-96 h-12 mb-2 my-1">
+            <div className="bg-gray-800 rounded-md text-gray-200 text-sm w-80 h-12">
                 <MultiSelectInput
                     name="selectedOptions"
                     options={[
@@ -130,20 +132,103 @@ const Form = () => {
                         { value: 'opcion3', label: 'Software dev' },
                     ]}
                     selectedOptions={formData.selectedOptions}
-                    onSelectedOptionsChange={handleOptionsChange}
+                    onSelectedOptionsChange={(selectedOptions) => setFormData({ ...formData, selectedOptions })}
                 />
             </div>
           </div>
           <div className="mb-3 mt-3">
             <Icons />
           </div>
-          <button type="submit" className="w-72 mt-4 ml-20 py-3 bg-darker-purple rounded-lg">
+          <button type="submit" className="flex items-center justify-center w-72 mt-4 py-3 bg-darker-purple rounded-lg">
             <h4 className="text-xl tracking-wide font-[550]">Sign Up</h4>
           </button>
         </form>
       </section>
     );
   };
+
+  
+const LoginForm: React.FC = () => {
+    const [formData, setFormData] = useState({
+      usernameOrEmail: '',
+      password: '',
+      rememberMe: false,
+    });
+  
+    const formRef = useRef<HTMLFormElement | null>(null);
+  
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      // Aquí puedes realizar acciones con los datos del formulario, como enviarlos a un servidor.
+      console.log('Datos del formulario enviados:', formData);
+  
+      // Reiniciar el formulario
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+  
+      // También puedes reiniciar el estado de formData si es necesario
+      setFormData({
+        usernameOrEmail: '',
+        password: '',
+        rememberMe: false,
+      });
+    };
+  
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value, type, checked } = e.target;
+      const newValue = type === 'checkbox' ? checked : value;
+      setFormData({ ...formData, [name]: newValue });
+    };
+  
+    return (
+      <form onSubmit={handleSubmit} ref={formRef}>
+        <div className="flex mt-2 flex-col justify-center align-middle mx-8">
+          {/* Componente Input para el nombre de usuario o correo electrónico */}
+          <Input
+            name="usernameOrEmail"
+            title="USERNAME or EMAIL"
+            placeHolder="Enter your Username or Email"
+            value={formData.usernameOrEmail}
+            onChange={handleInputChange}
+          />
+          {/* Componente PasswordInput */}
+          <PasswordInput
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className="flex flex-row justify-between items-center">
+          <label className="flex items-center align-middle text-sm text-gray-50 ml-10">
+            <input
+              type="checkbox"
+              name="rememberMe"
+              checked={formData.rememberMe}
+              onChange={handleInputChange}
+              className="mr-1"
+            />
+            Remember Me
+          </label>
+          {/* Forgot Password */}
+          <h6 className="text-sm text-blue mr-10">
+            <Link href="/forgot-password">Forgot Password?</Link>
+          </h6>
+        </div>
+        <div className="mb-3 mt-6">
+          <Icons />
+        </div>
+        <div className="flex justify-center items-center flex-col">
+          <button
+            type="submit"
+            className="w-72 mt-3 mb-6 py-3 bg-darker-purple rounded-lg"
+          >
+            <h4 className="text-xl tracking-wide font-[550]">Login</h4>
+          </button>
+        </div>
+      </form>
+    );
+  };
   
 
-export {Form, Input, PasswordInput};
+export {SignUpForm, LoginForm};
