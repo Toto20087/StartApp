@@ -1,45 +1,41 @@
-"use client"
-
 import React from 'react';
 import Select from 'react-select';
 import customStyles from './selectCustomStyles';
 
-const MultiSelectInput = () => {
-  const options = [
-    { value: 'opcion1', label: 'Back-End dev' },
-    { value: 'opcion2', label: 'Front-End dev' },
-    { value: 'opcion3', label: 'Software dev' },
-  ];
+interface MultiSelectInputProps {
+  name: string;
+  options: { value: string; label: string }[];
+  selectedOptions: string[];
+  onSelectedOptionsChange: (selectedOptions: string[]) => void;
+}
 
-  const MultiInput = () => {
-    const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
-  
-    const handleSelectChange = (selectedValues : string[]) => {
-      setSelectedOptions(selectedValues);
-    };
-  
-    return (
-      <div className="w-96 h-12">
-        <Select
-          isMulti
-          options={options}
-          value={selectedOptions}
-          onChange={handleSelectChange}
-          styles={customStyles}
-        />
-      </div>
-    );
+const MultiSelectInput: React.FC<MultiSelectInputProps> = ({
+  name,
+  options,
+  selectedOptions,
+  onSelectedOptionsChange,
+}) => {
+  const handleSelectChange = (selectedValues: { value: string; label: string }[]) => {
+    const selectedOptionValues = selectedValues.map((option) => option.value);
+    onSelectedOptionsChange(selectedOptionValues);
   };
+
+  const selectedOptionValues = selectedOptions.map((option) => {
+    return options.find((o) => o.value === option);
+  });
+
   return (
-    <section>
-      <div className='mt-4'>
-        <h6 className="text-xs font-semibold tracking-widest font-bebas" >WHAT DO YOU DO?</h6>
-      </div>
-      <div className="bg-gray-800 rounded-md text-gray-200 text-sm w-96 h-12 mb-2 my-1">
-        <MultiInput/>
-      </div>
-    </section>
+    <div className="w-96 h-12">
+      <Select
+        isMulti
+        options={options}
+        name={name}
+        value={selectedOptionValues}
+        onChange={handleSelectChange}
+        styles={customStyles}
+      />
+    </div>
   );
 };
 
-export default MultiSelectInput
+export default MultiSelectInput;
