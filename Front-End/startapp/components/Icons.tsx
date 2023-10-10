@@ -22,6 +22,13 @@ const Icons = () => {
             height={30}
             alt="Picture of the author"
         />
+        <Image 
+            src={ "/scg/search.svg"}
+            width={30}
+            height={30}
+            alt="Picture of the author"
+        />
+          
     </section>
     )
 }

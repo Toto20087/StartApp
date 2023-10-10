@@ -10,13 +10,12 @@ export default function RootLayout({
     <html>
       <head>
         <title>StartApp</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap" />
       </head>
-      <body className="flex bg-gray-800 text-white flex-col">
-        <header>
-          <NavBar/>
-        </header>
+      <body className="flex text-white flex-col">
         {children}
       </body>
     </html>
   );
 }
+                      

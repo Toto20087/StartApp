@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home () {
   return (
+<<<<<<< Updated upstream
     <article id="">
       <section className="pl-24 bg-gradient-to-br from-black from-50% to-primaryv w-full h-[1232px]" id="__next">
         <nav></nav>
@@ -20,5 +22,65 @@ export default function Home () {
         </div>
       </section>
     </article>
+=======
+    <>
+    <header>
+      <nav className='fixed justify-evenly block h-[80px] w-full bg-transparent flex flex-row items-center'> 
+        
+        <div className="flex flex-row items-center">
+
+          <Image className= 'w-[140px] h-[50px]'
+            src="/img/StartApp-Logo-lg.png"
+            alt=""
+            width = {200}
+            height= {100}
+          />
+        </div>
+        <ul className = "flex flex-row list-none gap-[40px] text-[20px] items-center">
+          <li className="ml-2 opacity-75 hover:opacity-100">Projects</li>
+          <li className="ml-2 opacity-75 hover:opacity-100">People</li>
+          <li className="ml-2 opacity-75 hover:opacity-100">About</li>
+        </ul>
+
+        <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
+        {
+          <button className=" text-primaryv opacity-75 hover:text-black static py-[13px] px-[34px] text-[20px] rounded-[17px] justify-center items-center bg-transparent border-2 border-primaryv hover:bg-primaryv font-red">
+           <Link href="/signup">Sign In</Link>
+          </button>
+        }
+        </div> 
+        <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
+        {
+          <button className="static py-[13px] px-[34px] text-[20px] rounded-[17px] justify-center items-center bg-transparent hover:bg-[#3B005E] font-red">
+           <Link className="text-[20px] opacity-75 hover:opacity-100" href="/signup">Log In</Link>
+          </button>
+        }
+        </div>  
+      </nav>
+    </header>
+    <section className="pl-24 bg-gradient-to-br from-black from-50% to-primaryv w-full h-[1232px]">
+      <h1 className="mt-[184px] mb-[27px] flex flex-col relative w-[838px]text-white text-[70px] justify-center font-semibold text-7xl font-red">Build your own team project</h1>
+      <div>
+      <p className="static mb-[47px] font-red w-[829px] h-[80px] font-red text-white text-[30px]">
+        Connect ideas with people to create starups and unique entrepeneurships.
+      </p>
+      </div>
+      <div>
+        {
+          <button className="inline static w-[185px] h-[67px] rounded-[17px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
+           <Link className=" static text-black font-red font-normal text-[25px] text-center my-4 mx-6" href="/signup">Get Started</Link>
+          </button>
+        }
+      </div>
+      <div>
+        {
+          <button className=" inline static w-[185px] h-[67px] rounded-[17px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
+           <Link className=" static text-black font-red font-normal text-[25px] text-center my-4 mx-6" href="/signup">Learn About</Link>
+          </button>
+        }
+      </div>
+    </section>
+    </>
+>>>>>>> Stashed changes
   )
 }

@@ -19,7 +19,8 @@ const config: Config = {
       nunito: 'Nunito, sans-serif',
       poppins: 'Poppins, sans-serif',
       raleway: 'Raleway, sans-serif',
-      bebas: 'Bebas Neue, sans-serif'
+      bebas: 'Bebas Neue, sans-serif',
+      red: 'Red Hat Display, sans-serif'
     },
     fontSize: {
       xs: '0.8rem',
