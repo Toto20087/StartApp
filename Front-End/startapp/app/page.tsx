@@ -3,26 +3,6 @@ import Image from "next/image";
 
 export default function Home () {
   return (
-<<<<<<< Updated upstream
-    <article id="">
-      <section className="pl-24 bg-gradient-to-br from-black from-50% to-primaryv w-full h-[1232px]" id="__next">
-        <nav></nav>
-        <h1 className="mt-[184px] flex flex-col relative w-[838px] top-0 left-0 text-white text-[70px] tracking-[0] justify-center shrink-0 font-semibold text-7xl not-italic leading-normal [font-family:'Red_Hat_Display-SemiBold',_Helvetica]">Build your own team project</h1>
-        <div>
-        <p className="relative w-[829px] h-[80px] top-0 left-0 [font-family:'Red_Hat_Display-Regular',_Helvetica] font-normal text-white text-[30px] tracking-[0] leading-[normal]">
-          Conect ideas with people to create starups and unique entrepeneurship.
-        </p>
-        </div>
-        <div>
-          {
-            <button className="relative w-[185px] h-[67px] rounded-[17px] border-0 border-none flex justify-center items-center bg-primaryv hover:bg-[#3B005E] font-semibold">
-            <Link className="text-black relative h-[30px] top-0 left-0 [font-family:'Inter-Regular',_Helvetica] font-normal text-[25px] text-center tracking-[0] leading-[normal] whitespace-nowrap my-4 mx-6" href="/signup">Get Started</Link>
-            </button>
-          }
-        </div>
-      </section>
-    </article>
-=======
     <>
     <header>
       <nav className='fixed justify-evenly block h-[80px] w-full bg-transparent flex flex-row items-center'> 
@@ -44,22 +24,22 @@ export default function Home () {
 
         <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
         {
-          <button className=" text-primaryv opacity-75 hover:text-black static py-[13px] px-[34px] text-[20px] rounded-[17px] justify-center items-center bg-transparent border-2 border-primaryv hover:bg-primaryv font-red">
+          <button className=" text-primaryv static py-[10px] px-[30px] text-[20px] rounded-[17px] justify-center items-center bg-transparent border-2 border-primaryv font-red">
            <Link href="/signup">Sign In</Link>
           </button>
         }
         </div> 
         <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
         {
-          <button className="static py-[13px] px-[34px] text-[20px] rounded-[17px] justify-center items-center bg-transparent hover:bg-[#3B005E] font-red">
-           <Link className="text-[20px] opacity-75 hover:opacity-100" href="/signup">Log In</Link>
+          <button className="static py-[10px] px-[30px] text-[20px] rounded-[17px] justify-center items-center bg-transparent border-slate-500 hover:bg[#151515] font-red">
+           <Link href="/signup">Log In</Link>
           </button>
         }
         </div>  
       </nav>
     </header>
-    <section className="pl-24 bg-gradient-to-br from-black from-50% to-primaryv w-full h-[1232px]">
-      <h1 className="mt-[184px] mb-[27px] flex flex-col relative w-[838px]text-white text-[70px] justify-center font-semibold text-7xl font-red">Build your own team project</h1>
+    <section className="pl-24 bg-gradient-to-br from-black from-50% to-primaryv w-full h-[full]">
+      <h1 className="mt-[184px] mb-[27px] flex flex-col static w-[838px]text-white text-[70px] justify-center font-semibold text-7xl font-red">Build your own team project</h1>
       <div>
       <p className="static mb-[47px] font-red w-[829px] h-[80px] font-red text-white text-[30px]">
         Connect ideas with people to create starups and unique entrepeneurships.
@@ -67,7 +47,7 @@ export default function Home () {
       </div>
       <div>
         {
-          <button className="inline static w-[185px] h-[67px] rounded-[17px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
+          <button className="inline static w-[185px] h-[67px] rounded-[20px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
            <Link className=" static text-black font-red font-normal text-[25px] text-center my-4 mx-6" href="/signup">Get Started</Link>
           </button>
         }
@@ -79,8 +59,13 @@ export default function Home () {
           </button>
         }
       </div>
+      <Image className= 'w-[881px] h-[776px] ml-[350px]'
+            src="/img/Imagen Vectorial.png"
+            alt=""
+            width = {200}
+            height= {100}
+          />
     </section>
     </>
->>>>>>> Stashed changes
   )
 }
