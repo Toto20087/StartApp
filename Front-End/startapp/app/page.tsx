@@ -45,16 +45,14 @@ export default function Home () {
         Connect ideas with people to create starups and unique entrepeneurships.
       </p>
       </div>
-      <div>
+      <div className="flex itemx-center gap-2">
         {
-          <button className="inline static w-[185px] h-[67px] rounded-[20px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
+          <button className="static w-[185px] h-[67px] rounded-[20px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
            <Link className=" static text-black font-red font-normal text-[25px] text-center my-4 mx-6" href="/signup">Get Started</Link>
           </button>
         }
-      </div>
-      <div>
         {
-          <button className=" inline static w-[185px] h-[67px] rounded-[17px] flex justify-center items-center bg-primaryv hover:opacity-75 font-semibold">
+          <button className=" static w-[185px] h-[67px] rounded-[17px] flex justify-center items-center bg-trasparent decoration-solid hover:opacity-75 font-semibold">
            <Link className=" static text-black font-red font-normal text-[25px] text-center my-4 mx-6" href="/signup">Learn About</Link>
           </button>
         }
