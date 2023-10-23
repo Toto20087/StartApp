@@ -32,7 +32,7 @@ export default function Home () {
         <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
         {
           <button className="static py-[10px] px-[30px] text-[20px] rounded-[17px] justify-center items-center bg-transparent border-slate-500 hover:bg[#151515] font-red">
-           <Link href="/signup">Log In</Link>
+           <Link href="/login">Log In</Link>
           </button>
         }
         </div>  
