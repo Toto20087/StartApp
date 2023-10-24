@@ -5,7 +5,7 @@ export default function Home () {
   return (
     <>
     <header>
-      <nav className='fixed justify-evenly block h-[80px] w-full bg-transparent flex flex-row items-center'> 
+      <nav className='fixed justify-evenly h-[80px] w-full bg-transparent flex flex-row items-center'> 
         
         <div className="flex flex-row items-center">
 
@@ -20,10 +20,12 @@ export default function Home () {
           <li className="ml-2 opacity-75 hover:opacity-100">Projects</li>
           <li className="ml-2 opacity-75 hover:opacity-100">People</li>
           <li className="ml-2 opacity-75 hover:opacity-100">About</li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 50 48" fill="none">
-          <circle cx="18.145" cy="17.75" r="16.5" stroke="white" stroke-width="2"/> 
-          <path d="M30.645 29.25L48.645 46.75" stroke="white" stroke-width="2"/>
-        </svg>
+          <Image className= 'w-11 h-11 opacity-50 hover:opacity-100'
+            src="/svg/search.svg"
+            alt=""
+            width = {200}
+            height= {100}
+          />
         </ul>
 
         <div className="flex flex-row list-none gap-[40px] text-[20px] items-center">
@@ -38,7 +40,7 @@ export default function Home () {
            <Link href="/signup">Sign In</Link>
           </button>
 
-          <button className=" hover:py-[10px] px-[30px] text-[20px] rounded-[17px] justify-center items-center font-red">
+          <button className=" hover:border-[1px] hover:border-white py-[10px] px-[30px] text-[20px] rounded-[17px] justify-center items-center font-red">
            <Link href="/login">Log In</Link>
           </button>
         
