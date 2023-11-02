@@ -42,7 +42,7 @@ export default function Home () {
           </div>
 
           <div className="flex flex-row items-center gap-[40px] mr-10">
-          <Image className= 'w-12 h-12 opacity-50 hover:opacity-100 active:opacity-30'
+          <Image className= 'w-12 h-12 opacity-100 active:opacity-30'
             src="/svg/notification.svg"
             alt=""
             width = {200}
@@ -67,11 +67,30 @@ export default function Home () {
           </header>
       
       <main className="bg-[#0A090B] h-screen w-screen">
-        <section className="w-screen mt-[80px] h-60 border-b-2 border-b-[#1C1C1C] ">
-          <div className="w-screen">
-            <h1 className="text-transparent text-[50px] font-red bg-clip-text bg-gradient-to-r from-primaryv to-white to-20% static">Notifications</h1>
-
+        <section className="w-screen mt-[80px] h-60 border-b-2 border-b-[#1C1C1C] shadow-lg">
+          <div className="w-screen flex gap-96">
+            <h1 className=" ml-[87px] mt-12 text-transparent text-[50px] font-red bg-clip-text bg-gradient-to-r from-primaryv to-white to-90% static">Notifications</h1>
+            <button className="ml-96 mt-16">
+              <Link className="text-white/70 hover:text-white active:text-white/30 font-red text-[18px] text-center underline" href="/signup">Mark as read</Link>
+            </button>
           </div>
+          
+          <ul className="flex flex-row list-none gap-[40px] text-[20px] items-center mt-16">
+            <li className="ml-[92px] px-[5px]">All</li>
+            <li className="text-white/70 hover:text-white active:text-white/30">Unread</li>
+            <li className="text-white/70 hover:text-white active:text-white/30">Acepted</li>
+            <li className="text-white/70 hover:text-white active:text-white/30">Declined</li>
+            <span className="absolute top-[318px] w-20 h-0.5 bg-primaryv transition-all duration-300 ease-out translate-x-[67px]"></span>
+            <li className="text-white/70 hover:text-white active:text-white/30 ml-[632px]">Search</li>
+            <li>
+              <Image className= 'w-8 h-8 opacity-50 hover:opacity-100 active:opacity-30'
+               src="/svg/configuration.svg"
+               alt=""
+               width = {200}
+               height= {100}
+               />
+            </li>
+          </ul>
 
         </section>
       </main>
